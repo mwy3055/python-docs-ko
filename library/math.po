@@ -10,8 +10,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-05-30 09:56+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Woo-young Myung <mwy3055@gmail.com>\n"
+"Language-Team: Korean (https://python.flowdas.com)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,13 +19,15 @@ msgstr ""
 
 #: ../Doc/library/math.rst:2
 msgid ":mod:`math` --- Mathematical functions"
-msgstr ""
+msgstr ":mod:'math' --- 수학 함수"
 
 #: ../Doc/library/math.rst:13
 msgid ""
 "This module is always available.  It provides access to the mathematical "
 "functions defined by the C standard."
 msgstr ""
+"이 모듈은 항상 사용할 수 있습니다. 이 모듈은 C 표준에 의해 정의된 "
+"함수에 접근할 수 있게 해 줍니다."
 
 #: ../Doc/library/math.rst:16
 msgid ""
@@ -39,16 +41,24 @@ msgid ""
 "so that the programmer can determine how and why it was generated in the "
 "first place."
 msgstr ""
+"복소수에 대해 이 함수를 사용하면 안 됩니다; 복소수에 대한 함수는 :mod:'cmath' "
+"모듈에 같은 이름으로 정의되어 있습니다. 이러한 구분을 하는 이유는 대부분의 사용자들이 "
+"복소수와 관련된 복잡한 수학을 배우고 싶어하지 않기 때문입니다. 매개변수로 복소수를 사용"
+"했을 때 복소수 값 대신 예외를 반환함으로써, 프로그래머는 그것이 어떻게, 왜 발생했는지 "
+"알 수 있게 됩니다."
 
 #: ../Doc/library/math.rst:25
 msgid ""
 "The following functions are provided by this module.  Except when "
 "explicitly noted otherwise, all return values are floats."
 msgstr ""
+"다음의 함수는 이 모듈에 의해 제공됩니다. 명시적으로 언급하지 않은 경우에는, "
+"모든 반환값은 실수입니다."
 
 #: ../Doc/library/math.rst:30
 msgid "Number-theoretic and representation functions"
 msgstr ""
+"정수론과 표현에 관한 함수"
 
 #: ../Doc/library/math.rst:34
 msgid ""
@@ -56,6 +66,8 @@ msgid ""
 "*x*. If *x* is not a float, delegates to ``x.__ceil__()``, which should "
 "return an :class:`~numbers.Integral` value."
 msgstr ""
+"*x* 의 천장 함수 값, 즉 *x* 보다 크거나 같은 최소의 정수값을 반환합니다. *x* 가 실수가 "
+"아니라면, :class:`numbers.Integral` 을 반환하는 ``x.__ceil__()`` 를 대신 호출합니다."
 
 #: ../Doc/library/math.rst:41
 msgid ""
@@ -63,16 +75,21 @@ msgid ""
 " *y*.  On platforms that support signed zeros, ``copysign(1.0, -0.0)`` "
 "returns *-1.0*."
 msgstr ""
+"*y* 와 부호가 같고 *x* 의 절댓값을 갖는 실수값을 반환합니다. 부호 있는 0을 지원하는 "
+"플랫폼에서는, ``copysign(1.0, -0.0)`` 은 *-1.0* 을 반환합니다."
 
 #: ../Doc/library/math.rst:48
 msgid "Return the absolute value of *x*."
 msgstr ""
+"*x* 의 절댓값을 반환합니다."
 
 #: ../Doc/library/math.rst:53
 msgid ""
 "Return *x* factorial.  Raises :exc:`ValueError` if *x* is not integral or"
 " is negative."
 msgstr ""
+"*x* 팩토리얼을 반환합니다. *x* 가 정수가 아니거나 음수라면 :exc:`ValueError` 를 "
+"발생시킵니다."
 
 #: ../Doc/library/math.rst:59
 msgid ""
@@ -80,6 +97,9 @@ msgid ""
 "If *x* is not a float, delegates to ``x.__floor__()``, which should "
 "return an :class:`~numbers.Integral` value."
 msgstr ""
+"*x* 의 천장 함수 값, 즉 *x* 보다 작거나 같은 최대의 정수값을 반환합니다. *x* 이"
+"실수가 아니라면, :class:`~numbers.Integral` 값을 반환하는 ``x.__floor__()``"
+"를 대신 호출합니다."
 
 #: ../Doc/library/math.rst:66
 #, python-format
@@ -98,6 +118,15 @@ msgid ""
 "working with floats, while Python's ``x % y`` is preferred when working "
 "with integers."
 msgstr ""
+"C 라이브러리에서 정의된 ``fmod(x, y)`` 를 반환합니다. 파이썬 구문 ``x % y``와 같은 "
+"결과를 반환하지 않을 수도 있습니다. C 표준의 ``fmod(x, y)``는 ``x - n*y`` 의 결과가 "
+"*x* 와 부호가 같고 절댓값이 ``abs(y)`` 보다 작도록 하는 정수 *n* 의 정확한(수학적으로; "
+"매우 정확하게)반환합니다. 파이썬의 `x % y`` 는 *y* 와 부호가 같은 값을 반환하며, float "
+"매개변수에 대해 정확한 값을 계산하지 못할 수도 있습니다. 예를 들어, ``fmod(-1e-100, 1e100)``"
+"은 ``-1e-100`` 이지만, 파이썬의 ``-1e-100 % 1e100`` 은 float으로 정확히 표현될 수 없는 "
+"``1e100-1e-100``이고, 놀랍게도 이것은 ``1e100`` 으로 반올림됩니다. 이러한 이유로, 함수 "
+":func:`fmod` 는 실수에 대한 연산에서 선호되며, 파이썬의 ``x % y`` 는 정수에 대한 연산에서 "
+"선호됩니다."
 
 #: ../Doc/library/math.rst:81
 msgid ""
@@ -107,12 +136,17 @@ msgid ""
 "used to \"pick apart\" the internal representation of a float in a "
 "portable way."
 msgstr ""
+"*x* 의 가수와 지수를 ``(m, e)`` 쌍으로 반환합니다. *m*은 실수이고 *e* 는 ``x == m * 2**e``"
+"를 정확히 만족시키는 정수입니다. 만약 *x* 가 0이라면, ``(0.0, 0)`` 을 반환하고, 그렇지 않다면 "
+"``0.5 <= abs(m) < 1`` 입니다. 이 함수는 실수의 내부 표현을 간단하게 \"얻기 위해\" 사용됩니다."
 
 #: ../Doc/library/math.rst:89
 msgid ""
 "Return an accurate floating point sum of values in the iterable.  Avoids "
 "loss of precision by tracking multiple intermediate partial sums::"
 msgstr ""
+"이터러블에 있는 값의 정확한 실수 합을 반환합니다. 다양한 중간 부분 합을 추적함으로써 "
+"값의 손실을 피합니다::"
 
 #: ../Doc/library/math.rst:97
 msgid ""
@@ -122,6 +156,9 @@ msgid ""
 " and may occasionally double-round an intermediate sum causing it to be "
 "off in its least significant bit."
 msgstr ""
+"알고리즘의 정확도는 IEEE-754의 연산에 대한 보장과 half-even 반올림 모드에 기반합니다. "
+"어떤 비 윈도우 빌드에서 내재된 C 라이브러리는 연장된 정확도(extended precision) 확장을 "
+"사용하며, 
 
 #: ../Doc/library/math.rst:103
 msgid ""
