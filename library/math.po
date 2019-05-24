@@ -66,8 +66,8 @@ msgid ""
 "*x*. If *x* is not a float, delegates to ``x.__ceil__()``, which should "
 "return an :class:`~numbers.Integral` value."
 msgstr ""
-"*x* 의 천장 함수 값, 즉 *x* 보다 크거나 같은 최소의 정수값을 반환합니다. *x* 가 실수가 "
-"아니라면, :class:`numbers.Integral` 을 반환하는 ``x.__ceil__()`` 를 대신 호출합니다."
+"*x*\\의 천장 함수 값, 즉 *x*\\보다 크거나 같은 최소의 정수값을 반환합니다. *x*\\가 실수가 "
+"아니라면, :class:`numbers.Integral` 을 반환하는 ``x.__ceil__()``\\을 대신 호출합니다."
 
 #: ../Doc/library/math.rst:41
 msgid ""
@@ -75,20 +75,20 @@ msgid ""
 " *y*.  On platforms that support signed zeros, ``copysign(1.0, -0.0)`` "
 "returns *-1.0*."
 msgstr ""
-"*y* 와 부호가 같고 *x* 의 절댓값을 갖는 실수값을 반환합니다. 부호 있는 0을 지원하는 "
-"플랫폼에서는, ``copysign(1.0, -0.0)`` 은 *-1.0* 을 반환합니다."
+"*y*\\와 부호가 같고 *x*\\의 절댓값을 갖는 실수값을 반환합니다. 부호 있는 0을 지원하는 "
+"플랫폼에서는, ``copysign(1.0, -0.0)``\\은 *-1.0*\\을 반환합니다."
 
 #: ../Doc/library/math.rst:48
 msgid "Return the absolute value of *x*."
 msgstr ""
-"*x* 의 절댓값을 반환합니다."
+"*x*\\의 절댓값을 반환합니다."
 
 #: ../Doc/library/math.rst:53
 msgid ""
 "Return *x* factorial.  Raises :exc:`ValueError` if *x* is not integral or"
 " is negative."
 msgstr ""
-"*x* 팩토리얼을 반환합니다. *x* 가 정수가 아니거나 음수라면 :exc:`ValueError` 를 "
+"*x* 팩토리얼을 반환합니다. *x*\\가 정수가 아니거나 음수라면 :exc:`ValueError`\\를 "
 "발생시킵니다."
 
 #: ../Doc/library/math.rst:59
@@ -97,7 +97,7 @@ msgid ""
 "If *x* is not a float, delegates to ``x.__floor__()``, which should "
 "return an :class:`~numbers.Integral` value."
 msgstr ""
-"*x* 의 천장 함수 값, 즉 *x* 보다 작거나 같은 최대의 정수값을 반환합니다. *x* 이"
+"*x*\\의 천장 함수 값, 즉 *x*\\보다 작거나 같은 최대의 정수값을 반환합니다. *x*\\가"
 "실수가 아니라면, :class:`~numbers.Integral` 값을 반환하는 ``x.__floor__()``"
 "를 대신 호출합니다."
 
@@ -118,14 +118,14 @@ msgid ""
 "working with floats, while Python's ``x % y`` is preferred when working "
 "with integers."
 msgstr ""
-"C 라이브러리에서 정의된 ``fmod(x, y)`` 를 반환합니다. 파이썬 구문 ``x % y``와 같은 "
-"결과를 반환하지 않을 수도 있습니다. C 표준의 ``fmod(x, y)``는 ``x - n*y`` 의 결과가 "
-"*x* 와 부호가 같고 절댓값이 ``abs(y)`` 보다 작도록 하는 정수 *n* 의 정확한(수학적으로; "
-"매우 정확하게)반환합니다. 파이썬의 `x % y`` 는 *y* 와 부호가 같은 값을 반환하며, float "
+"C 라이브러리에서 정의된 ``fmod(x, y)``\\를 반환합니다. 파이썬 구문 ``x % y``\\와 같은 "
+"결과를 반환하지 않을 수도 있습니다. C 표준의 ``fmod(x, y)``\\는 ``x - n*y``\\의 결과가 "
+"*x*\\와 부호가 같고 절댓값이 ``abs(y)``\\보다 작도록 하는 정수 *n*\\의 정확한(수학적으로; "
+"매우 정확하게)반환합니다. 파이썬의 `x % y``\\는 *y*\\와 부호가 같은 값을 반환하며, float "
 "매개변수에 대해 정확한 값을 계산하지 못할 수도 있습니다. 예를 들어, ``fmod(-1e-100, 1e100)``"
 "은 ``-1e-100`` 이지만, 파이썬의 ``-1e-100 % 1e100`` 은 float으로 정확히 표현될 수 없는 "
-"``1e100-1e-100``이고, 놀랍게도 이것은 ``1e100`` 으로 반올림됩니다. 이러한 이유로, 함수 "
-":func:`fmod` 는 실수에 대한 연산에서 선호되며, 파이썬의 ``x % y`` 는 정수에 대한 연산에서 "
+"``1e100-1e-100``\\이고, 놀랍게도 이것은 ``1e100``\\으로 반올림됩니다. 이러한 이유로, 함수 "
+":func:`fmod`\\는 실수에 대한 연산에서 선호되며, 파이썬의 ``x % y``\\는 정수에 대한 연산에서 "
 "선호됩니다."
 
 #: ../Doc/library/math.rst:81
@@ -136,9 +136,9 @@ msgid ""
 "used to \"pick apart\" the internal representation of a float in a "
 "portable way."
 msgstr ""
-"*x* 의 가수와 지수를 ``(m, e)`` 쌍으로 반환합니다. *m*은 실수이고 *e* 는 ``x == m * 2**e``"
-"를 정확히 만족시키는 정수입니다. 만약 *x* 가 0이라면, ``(0.0, 0)`` 을 반환하고, 그렇지 않다면 "
-"``0.5 <= abs(m) < 1`` 입니다. 이 함수는 실수의 내부 표현을 간단하게 \"얻기 위해\" 사용됩니다."
+"*x*\\의 가수와 지수를 ``(m, e)`` 쌍으로 반환합니다. *m*\\은 실수이고 *e*\\는 ``x == m * 2**e``"
+"를 정확히 만족시키는 정수입니다. 만약 *x*\\가 0이라면, ``(0.0, 0)``\\을 반환하고, 그렇지 않다면 "
+"``0.5 <= abs(m) < 1``\\입니다. 이 함수는 실수의 내부 표현을 간단하게 \"얻기 위해\" 사용됩니다."
 
 #: ../Doc/library/math.rst:89
 msgid ""
@@ -157,8 +157,8 @@ msgid ""
 "off in its least significant bit."
 msgstr ""
 "알고리즘의 정확도는 IEEE-754의 연산에 대한 보장과 half-even 반올림 모드에 기반합니다. "
-"어떤 비 윈도우 빌드에서 내재된 C 라이브러리는 연장된 정확도(extended precision) 확장을 "
-"사용하며, 
+"어떤 비 윈도우 빌드에서, 내재된 C 라이브러리는 연장된 정확도(extended precision) 확장을 "
+"사용하며, ~~~을 위해 가끔 중간합을 double-round할 수 있습니다."
 
 #: ../Doc/library/math.rst:103
 msgid ""
@@ -166,6 +166,8 @@ msgid ""
 "cookbook recipes for accurate floating point summation "
 "<https://code.activestate.com/recipes/393090/>`_\\."
 msgstr ""
+"더 많은 정보와 다른 접근법을 알고 싶다면, `정확한 실수 합에 대한 ASPN "
+"문서를 열람하세요 <https://code.activestate.com/recipes/393090/>`_\\."
 
 #: ../Doc/library/math.rst:110
 msgid ""
@@ -174,18 +176,24 @@ msgid ""
 "largest positive integer that divides both *a* and *b*.  ``gcd(0, 0)`` "
 "returns ``0``."
 msgstr ""
+"정수 *a*\\와 *b*\\의 최대공약수를 반환합니다. *a* 또는 *b*\\가 0이 아니라면, "
+"``gcd(a, b)``\\는 *a*\\와 *b* 모두를 나누는 가장 큰 양의 정수입니다. "
+"``gcd(0, 0)``\\는 0을 반환합니다."
 
 #: ../Doc/library/math.rst:120
 msgid ""
 "Return ``True`` if the values *a* and *b* are close to each other and "
 "``False`` otherwise."
 msgstr ""
+"*a*\\와 *b*\\ 의 값이 서로 가까이 있다면 ``True``\\를, 그렇지 않다면 ``False``"
+"를 반환합니다."
 
 #: ../Doc/library/math.rst:123
 msgid ""
 "Whether or not two values are considered close is determined according to"
 " given absolute and relative tolerances."
 msgstr ""
+"두 값이 가까이 있는지는 주어진 절대 및 상대 오차 한계에 따라 결정됩니다."
 
 #: ../Doc/library/math.rst:126
 msgid ""
@@ -196,18 +204,26 @@ msgid ""
 "are the same within about 9 decimal digits.  *rel_tol* must be greater "
 "than zero."
 msgstr ""
+"*rel_tol*\\은 상대 오차 한계입니다 -- *a*\\와 *b*\\의 절댓값 중 더 큰 값에 따라 결정되는 "
+"오차의 최댓값입니다. 예를 들어 오차 한계를 5%로 설정하고자 한다면, ``rel_tol==0.05``"
+"를 전달해야 합니다. 오차 한계의 기본값은 ``1e-09``\\이며, 이것은 두 값이 소수점 아래 "
+"9자리까지 같다는 것을 보장합니다. *rel_tol*\\은 0보다 커야 합니다."
 
 #: ../Doc/library/math.rst:132
 msgid ""
 "*abs_tol* is the minimum absolute tolerance -- useful for comparisons "
 "near zero. *abs_tol* must be at least zero."
 msgstr ""
+"*abs_tol* 은 최소 한계 오차입니다 -- 0과 가까운 값의 비교에 유용합니다. *abs_tol*"
+"은 0 이상이어야 합니다."
 
 #: ../Doc/library/math.rst:135
 msgid ""
 "If no errors occur, the result will be: ``abs(a-b) <= max(rel_tol * "
 "max(abs(a), abs(b)), abs_tol)``."
 msgstr ""
+"에러가 발생하지 않은 경우, 결과는 다음과 같을 것입니다: ``abs(a-b) <= max(rel_tol * "
+"max(abs(a), abs(b)), abs_tol)``."
 
 #: ../Doc/library/math.rst:138
 msgid ""
@@ -216,38 +232,50 @@ msgid ""
 " close to any other value, including ``NaN``.  ``inf`` and ``-inf`` are "
 "only considered close to themselves."
 msgstr ""
+"IEEE 754의 특수 값인 ``NaN``\\, ``inf``\\, ``-inf``\\은 IEEE 규칙에 의해 "
+"처리됩니다. 구체적으로 ``NaN``은 자기 자신을 포함한 다른 어떤 값과도 가깝지 않으며, "
+"``inf``\\와 ``-inf``\\은 자기 자신만이 가까운 값으로 판정됩니다."
 
 #: ../Doc/library/math.rst:147
 msgid ":pep:`485` -- A function for testing approximate equality"
 msgstr ""
+"":pep:`485` -- 동등함을 대략적으로 확인하는 함수"
 
 #: ../Doc/library/math.rst:152
 msgid ""
 "Return ``True`` if *x* is neither an infinity nor a NaN, and ``False`` "
 "otherwise.  (Note that ``0.0`` *is* considered finite.)"
 msgstr ""
+"*x*\\가 무한 또는 NaN이 아니라면 ``True``\\를, 그렇지 않다면 ``False``\\를 "
+"반환합니다. (``0.0``\\은 유한입니다.)
 
 #: ../Doc/library/math.rst:160
 msgid ""
 "Return ``True`` if *x* is a positive or negative infinity, and ``False`` "
 "otherwise."
 msgstr ""
+""*x*\\가 양 또는 음의 무한이라면 ``True``\\를, 그렇지 않다면 ``False``\\를 "
+"반환합니다."
 
 #: ../Doc/library/math.rst:166
 msgid "Return ``True`` if *x* is a NaN (not a number), and ``False`` otherwise."
 msgstr ""
+"*x*\\가 NaN(숫자가 아님)이라면 ``True``\\를, 그렇지 않다면 ``False``\\를 "
+"반환합니다."
 
 #: ../Doc/library/math.rst:171
 msgid ""
 "Return ``x * (2**i)``.  This is essentially the inverse of function "
 ":func:`frexp`."
 msgstr ""
+""``x * (2**i)``\\를 반환합니다. 이것은 본질적으로 함수 :func:`frexp`\\의 역입니다."
 
 #: ../Doc/library/math.rst:177
 msgid ""
 "Return the fractional and integer parts of *x*.  Both results carry the "
 "sign of *x* and are floats."
 msgstr ""
+"*x*\\의 정수 부분과 소수 부분을 반환합니다. 각 값은 실수이며, *x*\\의 부호를 따릅니다."
 
 #: ../Doc/library/math.rst:183
 msgid ""
@@ -258,6 +286,11 @@ msgid ""
 "integers, the nearest *even* integer is used for ``n``.  The remainder "
 "``r = remainder(x, y)`` thus always satisfies ``abs(r) <= 0.5 * abs(y)``."
 msgstr ""
+"*y*\\에 대한 *x*\\의 IEEE-754 스타일의 나머지를 반환합니다. 유한 값 *x*\\와 "
+"0이 아닌 유한 값 *y*\\에 대해, 이것은 ``x - n*y``\\와 같습니다. 이때 ``n``\\은 "
+"``x / y``\\의 정확한 값과 가장 가까운 정수입니다. ``x / y``\\가 연속되는 두 정수의 "
+"중점에 있을 때, 가장 가까운 *짝수* 값이 ``n``\\으로 쓰입니다. 따라서 나머지 ``r = "
+"remainder(x, y)``\\는 항상 ``abs(r) <= 0.5 * abs(y)``\\를 만족시킵니다.""
 
 #: ../Doc/library/math.rst:190
 msgid ""
@@ -267,6 +300,10 @@ msgid ""
 "If the result of the remainder operation is zero, that zero will have the"
 " same sign as *x*."
 msgstr ""
+"특이 케이스의 경우 IEEE 754를 따릅니다: 특히 ``remainder(x, math.inf)``\\는 "
+"모든 유한한 *x*\\에 대해 *x*\\이고, ``remainder(x, 0)``\\과 "
+"``remainder(math.inf, x)``\\는 NaN이 아닌 모든 *x*\\에 대해 :exc:`ValueError`"
+"를 발생시킵니다. 나머지 연산의 결과가 0이라면, 이 0은 *x*\\와 같은 부호를 가집니다."
 
 #: ../Doc/library/math.rst:196
 msgid ""
@@ -274,6 +311,8 @@ msgid ""
 "operation is always exactly representable: no rounding error is "
 "introduced."
 msgstr ""
+"IEEE 754 이진 부동 소수점을 사용하는 플랫폼에서, 이 연산의 결과는 항상 표현 가능합니다: "
+"반올림 에러는 발생하지 않습니다."
 
 #: ../Doc/library/math.rst:204
 msgid ""
@@ -281,6 +320,7 @@ msgid ""
 ":class:`~numbers.Integral` (usually an integer). Delegates to "
 ":meth:`x.__trunc__() <object.__trunc__>`."
 msgstr ""
+"
 
 #: ../Doc/library/math.rst:209
 msgid ""
